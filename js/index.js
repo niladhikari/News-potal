@@ -95,15 +95,15 @@ const showModalData = (news) =>{
     news.forEach(data => {
         console.log(data);
         modalContainer.innerHTML = `
-        <div class="card">
+        <div class="card  lg:w-96">
         <figure>
-            <img src="${data?.image_url
+            <img class='w-40 m-auto lg:w-full' src="${data?.image_url
             }" alt="Shoes" />
         </figure>
         <div class="card-body">
             <h2 class="card-title">
                 ${data?.title.slice(0, 40)}
-                <div class="badge badge-secondary p-5">${data?.rating?.badge}</div>
+                <div class="badge badge-secondary p-2">${data?.rating?.badge}</div>
             </h2>
             <p>
                 ${data?.details.slice(0, 80)}
